@@ -1,0 +1,24 @@
+{% extends 'accounts/profile.html' %}
+{% load static %}
+{% block title2 %}
+{{User_name}}
+{% endblock %}
+{% block content2 %}
+<link rel="stylesheet" href="{% static '/css/general.css' %}">
+<div class="image_warpper">
+    <!--<a onclick="change_img();return false;"><img title="click to change photo" src={{image}} class="profile-pic"></a>-->
+    <input type="image" src={{image}} class="profile-pic">
+    <input type="file" id="my_file" style="display: none;" />
+
+</div>
+<div class="info">
+    <h1>{{User_name}} {{User_name2}}</h1>
+    <p style="font-size:160%;">{{email}}</p>
+    <p style="font-size:160%;">{{phone}}</p>
+</div>
+<script>
+    $("input[type='image']").click(function() {
+    $("input[id='my_file']").click();
+});
+</script>
+{% endblock %}

@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Title</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="{% static '/css/navbar.css'%}">
+</head>
+<body>
+
+<nav class="navbar the_list">
+    <div class="container-fluid">
+
+        <!-- Logo -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainNavBar">
+                <p style="color:white;">Menu</p>
+            </button>
+            <a href="#" class="navbar-brand">Title</a>
+        </div>
+
+        <!-- Menu Items -->
+        <div class="collapse navbar-collapse" id="mainNavBar" >
+            <ul class="nav navbar-nav list_element">
+                <li class="c1" ><a href="#">Browse Business</a></li>
+                <li class="c2"><a href="#">Your Invests</a></li>
+                <li class="c3"><a href="#">Your Business</a></li>
+                <li class="c4"><a href="{% url 'general' %}">Hey, {% block title %}{% endblock %}</a></li>
+                <li class="c5"> <a href="{% url 'logout' %}">Logout</a></li>
+            </ul>
+        </div>
+
+    </div>
+</nav>
+    {% block content %}
+
+
+
+	{% endblock %}
+</body>
+</html>

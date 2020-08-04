@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="{% static '/css/style.css' %}">
+    <link rel="stylesheet" href="{% static '/fonts/material-icon/css/material-design-iconic-font.min.css' %}">
+</head>
+<body>
+<div class="bg-modal_login">
+        <div class="modal-content_logout">
+            <p style="font-size:160%;">Are you sure you want to logout?</p>
+            <br>
+            <div class="form_otp">
+                <form id="yes" method="POST">{% csrf_token %}</form>
+                <button class="button button1" form="yes" type="submit">Yes</button>
+                <button class="button button2" onclick="no();return false;" type="submit">No</button>
+            </div>
+        </div>
+</div>
+</body>
+<script type="text/javascript">
+    function no(){
+        location.href = "/home";
+    };
+</script>
+</html>

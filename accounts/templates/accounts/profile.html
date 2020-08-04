@@ -1,0 +1,36 @@
+{% extends 'accounts/navbar.html' %}
+{% load static %}
+{% block title %}
+{% block title2 %}
+{% endblock %}
+{% endblock %}
+{% block content %}
+<link rel="stylesheet" href="{% static '/css/profile.css' %}">
+
+  <div class="sidebar">
+    <a class="general" href="#home">General</a>
+    <a href="#about">Documents</a>
+    <a href="#news">Billing Account</a>
+    <a href="#contact">Help</a>
+  </div>
+
+  <div class="content">
+    <div class="profile">
+      {% block content2 %}
+      {% endblock %}
+    </div>
+  </div>
+<script>
+  $(document).ready(function(){
+    if (screen.width < 700){
+      $(".sidebar").css({"margin-top":'0px'});
+      $(".profile").css({"margin-top":'0px'});
+    }
+    else{
+      $(".sidebar").css({"margin-top":($('.navbar').height()+'px')});
+      $(".profile").css({"margin-top":($('.navbar').height()+'px')});
+    }
+  });
+
+</script>
+{% endblock %}

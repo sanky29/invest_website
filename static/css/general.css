@@ -1,0 +1,48 @@
+@import "profile.css";
+.image_warpper{
+    margin-left: auto;
+    margin-right: auto;
+    width:200px;
+    height:200px;
+    border-radius: 50%;
+    overflow:hidden;
+    border: 2px solid green;
+    color: black !important;
+}
+.profile-pic {
+  padding: auto;
+  max-width:100%;
+  max-height:100%;
+}
+.profile-pic:hover{
+    opacity: 0.7;
+}
+.general{
+color: green !important;
+}
+.sidebar a:hover:not(.general) {
+  color: white;
+  background-color:rgb(60, 60, 60);
+}
+.info{
+    text-align:center;
+}
+
+.bg_nodal_image{
+    width:100%;
+    height:100%;
+    background-color:rgba(0,0,0,0.7);
+    position: fixed;
+    opacity: 0.8;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.modal_content_image{
+    width: 300px;
+    height:300px;
+    background:black;
+    color: white;
+
+}
